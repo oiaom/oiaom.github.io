@@ -15,11 +15,15 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="观前提示因为学习的不是很深入，尽管linux各个发行版可以百度资料，但是对各个发行版的简介百度上不详细，所以如果我已经尝试过某个发行版，我会用我自己的体验来介绍，肯定有问题。但是还好，我尽量只做简介，而不介绍命令，这样即使知识或者观点错误也不会对读者们电脑带来危害，知识有错误的话也只是认知错误，不会对电脑造成伤害，所以有些小错误也不会造成大影响。更重要的是，由于我没有接触服务器版的linux而只是">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://pic.downk.cc/item/5ec3fabdc2a9a83be5776540.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5ec3fcbbc2a9a83be57a758c.jpg">
+<meta property="og:image" content="https://pic.downk.cc/item/5ec3fdfac2a9a83be57c2be0.jpg">
 <meta property="article:published_time" content="2020-05-10T01:02:04.000Z">
-<meta property="article:modified_time" content="2020-05-14T14:22:23.146Z">
-<meta property="article:author" content="John Doe">
+<meta property="article:modified_time" content="2020-05-19T15:42:02.742Z">
+<meta property="article:author" content="Oiaom">
 <meta property="article:tag" content="狗头 新手理解">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://pic.downk.cc/item/5ec3fabdc2a9a83be5776540.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -51,7 +55,7 @@
 			<img src="/assets/头像.jpg" class="js-avatar">
 		</a>
 		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
+		  <h1 class="header-author"><a href="/">Oiaom</a></h1>
 		</hgroup>
 		
 
@@ -109,7 +113,7 @@
 				<img src="/assets/头像.jpg" class="js-avatar">
 			</div>
 			<hgroup>
-			  <h1 class="header-author js-header-author">John Doe</h1>
+			  <h1 class="header-author js-header-author">Oiaom</h1>
 			</hgroup>
 			
 			
@@ -230,12 +234,17 @@
 <p>具体可以自己看链接，就不赘述了。所以内存高不一定慢。（其实我感觉win10也有这个特性，内存占用也比较高但用着也不慢，当然有的人内存占用高就很卡，我不太清楚）</p>
 <p><strong>第三点</strong>，软件安装方面的差异。首先声明，linux是无法运行exe文件的。而大多数软件的安装程序是exe的（本来就是开发给win用的233），你点开exe后缀的文件，只会发现一些看不懂的英文。所以不要试图通过exe文件来安装应用。linux的安装包是其他格式的。例如，debian系的是deb后缀的安装包，是因为debian系的包管理器是dpkg。而红帽(Redhat)系的包管理器则是RPM，所以可以安装rpm后缀的安装包。当然还有其他linux系统，这些安装方式就比较深奥了。但其实安装的实质本身就是把文件放在哪一个位置，可不可以执行只是一个方便不方便的问题。即使是包管理器为dpkg的发行版，也可以安装rpm包（前提是包里面的东西支持这个系统，例如我同样的文件，然后一个打包成deb，另一个打包成rpm，那这两个安装包其实是一样的，因为里面的文件是一样的）。rpm或者是deb只是识别的问题，如果是对应的格式和包管理器的话，可以直接命令行或者是系统自带的图形化的安装包管理器自动安装，很方便。如果不对应，那就要手动安装，把文件手动放到指定位置了，当然也可以格式转换工具转换，这在百度上都可以搜到。</p>
 <h1 id="linux的发行版"><a href="#linux的发行版" class="headerlink" title="linux的发行版"></a>linux的发行版</h1><p>终于来到了重头戏。上面是linux和win在使用上的区别（因为我主要是日常使用，所以肯定不涉及到一些高深方面的体验！），那么再来说linux内部的区别。在开始之前，当然要对分支要有一个认识。</p>
-<p>本来是准备引用维基百科上的图片的，但是不知道是不是因为太大一直加载不出来，还是因为我没有处理好。谷歌搜索linux发行版就可以看到这一张图片。可以说是几乎把所有常见的linux发行版全部概括了，还标上了时间轴的发展。可以说非常好了。这里贴上链接：</p>
+<p>这里贴上原图链接和转载需要的注明出处，因为图片太大，所以分两部分上传，一个是debian系的，一个是slackware的，还有一个是红帽，剩下的是好多其他的系统。图片做的非常好，在其顶部还标有年份。</p>
 <blockquote>
 <p><a href="https://zh.wikipedia.org/wiki/Linux发行版" target="_blank" rel="noopener">https://zh.wikipedia.org/wiki/Linux%E5%8F%91%E8%A1%8C%E7%89%88</a></p>
 </blockquote>
-<p>那么可能有人会问，要是想了解各个发行版直接在百度上搜不就好了？但是百度上的评价很多都涉及到了服务器版本，评价也比较粗略。所以我结合我的使用体验来介绍一下我用过的linux发行版中各个版本的不同。</p>
-<p>首先对linux的分类：（摘自维基百科，也即上面引用的链接）</p>
+<blockquote>
+<p>由Andreas Lundqvist (initially), Muhammad Herdiansyah (continued), Fabio Loli (continued) - <a href="http://futurist.se/gldt/" target="_blank" rel="noopener">http://futurist.se/gldt/</a> (initially), <a href="https://github.com/konimex/linuxtimeline" target="_blank" rel="noopener">https://github.com/konimex/linuxtimeline</a> (continued), <a href="https://github.com/FabioLolix/LinuxTimeline" target="_blank" rel="noopener">https://github.com/FabioLolix/LinuxTimeline</a> (continued)，GFDL 1.3，<a href="https://commons.wikimedia.org/w/index.php?curid=2556373" target="_blank" rel="noopener">https://commons.wikimedia.org/w/index.php?curid=2556373</a></p>
+</blockquote>
+<p><img src="https://pic.downk.cc/item/5ec3fabdc2a9a83be5776540.jpg" alt></p>
+<p><img src="https://pic.downk.cc/item/5ec3fcbbc2a9a83be57a758c.jpg" alt></p>
+<p><img src="https://pic.downk.cc/item/5ec3fdfac2a9a83be57c2be0.jpg" alt></p>
+<p>上面是以系统的发展作为分类，下面这个是以包管理器搞得分类：（摘自维基百科，也即上面引用的链接）</p>
 <blockquote>
 <h3 id="流行的发行版-编辑"><a href="#流行的发行版-编辑" class="headerlink" title="流行的发行版[编辑]"></a>流行的发行版[<a href="https://zh.wikipedia.org/w/index.php?title=Linux发行版&action=edit&section=6" target="_blank" rel="noopener">编辑</a>]</h3><p>更多信息：<a href="https://zh.wikipedia.org/wiki/Linux发行版列表" target="_blank" rel="noopener">Linux发行版列表</a></p>
 <h4 id="基于Dpkg-Debian系-编辑"><a href="#基于Dpkg-Debian系-编辑" class="headerlink" title="基于Dpkg (Debian系)[编辑]"></a>基于Dpkg (Debian系)[<a href="https://zh.wikipedia.org/w/index.php?title=Linux发行版&action=edit&section=7" target="_blank" rel="noopener">编辑</a>]</h4><p>商业发行版</p>
@@ -273,7 +282,8 @@
 <li><a href="https://zh.wikipedia.org/wiki/Slackware" target="_blank" rel="noopener">Slackware</a>，最早的发行版之一，1993年创建，由<a href="https://zh.wikipedia.org/w/index.php?title=Patrick_J._Volkerding&action=edit&redlink=1" target="_blank" rel="noopener">Patrick J. Volkerding</a>维护。</li>
 </ul>
 </blockquote>
-<p>这个是按照包管理器分类的，在QQ官网有linuxQQ的下载，其中我们就能够很清楚的看到，它提供了deb、rpm、pacman三种安装包，方便各个不同的系统安装。我主要体验了一些debian系的也就是dpkg的包管理器的系统。</p>
+<p>例如，在QQ官网有linuxQQ的下载，其中我们就能够很清楚的看到，它提供了deb、rpm、pacman三种安装包，方便各个不同的系统安装。我主要体验了一些debian系的也就是dpkg的包管理器的系统。</p>
+<p>无论是按照包管理器还是发展历程来分类，都可以看见linux系统之多，可谓博大精深。（虽说好多命令相同）</p>
 <hr>
 <h3 id="debian"><a href="#debian" class="headerlink" title="debian"></a>debian</h3><p>这个我使用的比较少，基本就是安装体验了一下。下载镜像的过程中很快，镜像不到一个G。但是如果你需要桌面环境的话就悲剧了，安装过程就会非常慢，当然这不是重点。我试了一下，好像无法安装WPS，可能是缺少什么架构啊之内的，这个不是很清楚。总之这个不适合日常使用。debian10的安装界面还是很友好的，也可以装一个来学习，毕竟是一个老祖宗级别的系统，学透了这个就对所有衍生版有了基础。而且由于很老，时间长，关于依赖问题这一方面解决的很好，相当稳定。</p>
 <h3 id="Ubuntu"><a href="#Ubuntu" class="headerlink" title="Ubuntu"></a>Ubuntu</h3><p>这可能是我们最熟悉的一个系统了。ubuntu的使用人数在整个linux系统中都是比较多的，也是我目前为止使用时间最长的一个系列。它是基于debian的一个系统，关于Ubuntu的问题在其他文章我是有提及的，但我还是再归纳总结一下。</p>
@@ -403,11 +413,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2020/05/14/linux%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%86%E7%B1%BB/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2020/05/17/%E5%A5%BD%E5%A5%BD%E5%AD%A6%E4%B9%A0/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          linux发行版分类
+          好好学习
         
       </div>
     </a>
@@ -457,7 +467,7 @@
   <div class="outer">
     <div id="footer-info">
     	<div class="footer-left">
-    		&copy; 2020 John Doe
+    		&copy; 2020 Oiaom
     	</div>
       	<div class="footer-right">
       		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
@@ -540,11 +550,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">小白</a>
+                <a href="javascript:void(0)" class="js-tag color3">狗头 新手理解</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">狗头 新手理解</a>
+                <a href="javascript:void(0)" class="js-tag color3">小白</a>
               </li>
             
             <div class="clearfix"></div>
