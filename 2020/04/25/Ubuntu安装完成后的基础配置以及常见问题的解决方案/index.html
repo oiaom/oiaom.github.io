@@ -6,22 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Ubuntu安装完成后的基础配置以及常见问题的解决方案（修改充实版本） | Hexo</title>
+  <title>Ubuntu安装完成后的基础配置以及常见问题的解决方案（修改充实版本） | Oiaom在线乱扯</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="写在前面  我写这篇文章的时候ubuntu版本是20.04LTS，但是其实文中采取的措施或者思路在任何版本上应该都能使用，有不一样的地方为会标出来，为使用了18.04一个星期左右就使用了20.04了。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Ubuntu安装完成后的基础配置以及常见问题的解决方案（修改充实版本）">
 <meta property="og:url" content="http://yoursite.com/2020/04/25/Ubuntu%E5%AE%89%E8%A3%85%E5%AE%8C%E6%88%90%E5%90%8E%E7%9A%84%E5%9F%BA%E7%A1%80%E9%85%8D%E7%BD%AE%E4%BB%A5%E5%8F%8A%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E7%9A%84%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
-<meta property="og:site_name" content="Hexo">
+<meta property="og:site_name" content="Oiaom在线乱扯">
 <meta property="og:description" content="写在前面  我写这篇文章的时候ubuntu版本是20.04LTS，但是其实文中采取的措施或者思路在任何版本上应该都能使用，有不一样的地方为会标出来，为使用了18.04一个星期左右就使用了20.04了。">
 <meta property="og:locale" content="en_US">
 <meta property="article:published_time" content="2020-04-25T02:37:50.000Z">
-<meta property="article:modified_time" content="2020-05-09T08:10:29.000Z">
+<meta property="article:modified_time" content="2020-05-22T15:12:24.409Z">
 <meta property="article:author" content="Oiaom">
-<meta property="article:tag" content="小白">
+<meta property="article:tag" content="小白理解">
 <meta name="twitter:card" content="summary">
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+    <link rel="alternative" href="/atom.xml" title="Oiaom在线乱扯" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.png">
@@ -60,7 +60,9 @@
 			
 				<li><a href="/">主页</a></li>
 	        
-				<li><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+				<li><a href="/tags/%E5%B0%8F%E7%99%BD%E7%90%86%E8%A7%A3/">对电脑小白理解</a></li>
+	        
+				<li><a href="/tags/%E9%A2%98%E5%A4%96%E8%AF%9D/">题外话</a></li>
 	        
 			</ul>
 		</nav>
@@ -118,6 +120,8 @@
 			
 				
 			
+				
+			
 			
 			
 			<nav class="header-nav">
@@ -135,12 +139,14 @@
 			</nav>
 
 			<nav class="header-menu js-header-menu">
-				<ul style="width: 50%">
+				<ul style="width: 70%">
 				
 				
-					<li style="width: 50%"><a href="/">主页</a></li>
+					<li style="width: 33.333333333333336%"><a href="/">主页</a></li>
 		        
-					<li style="width: 50%"><a href="/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+					<li style="width: 33.333333333333336%"><a href="/tags/%E5%B0%8F%E7%99%BD%E7%90%86%E8%A7%A3/">对电脑小白理解</a></li>
+		        
+					<li style="width: 33.333333333333336%"><a href="/tags/%E9%A2%98%E5%A4%96%E8%AF%9D/">题外话</a></li>
 		        
 				</ul>
 			</nav>
@@ -182,7 +188,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a><strong><u>写在前面</u></strong></h1><p>  我写这篇文章的时候ubuntu版本是20.04LTS，但是其实文中采取的措施或者思路在任何版本上应该都能使用，有不一样的地方为会标出来，为使用了18.04一个星期左右就使用了20.04了。<a id="more"></a></p>
+        <h1 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h1><p>  我写这篇文章的时候ubuntu版本是20.04LTS，但是其实文中采取的措施或者思路在任何版本上应该都能使用，有不一样的地方为会标出来，为使用了18.04一个星期左右就使用了20.04了。<a id="more"></a></p>
 <h1 id="ubuntu安装后的基本配置和优化（个人向）"><a href="#ubuntu安装后的基本配置和优化（个人向）" class="headerlink" title="ubuntu安装后的基本配置和优化（个人向）"></a>ubuntu安装后的基本配置和优化（个人向）</h1><p>  注意！我这里是优化，不是美化！！我的思想是越流畅，越易于使用越好而不是美观。如果需要美观的教程在百度上有很多很好的文章，但是对于优化其实好的文章比较少，所以为把我的优化思路记录下来。另外，我列举的这些优化措施是按照时间顺序排列的，其实也没有要严格遵循，但是有的是必须要先后顺序的，此外还会大量应用别人写的文章，到时候链接就贴在下面。</p>
 <hr>
 <h3 id="选择合适的软件源"><a href="#选择合适的软件源" class="headerlink" title="选择合适的软件源"></a>选择合适的软件源</h3><p>  这永远是第一件事，大多数帖子都把它放在第一位，因为如果源选的不好，后面使用终端命令安装软件的时候就会出现有些软件找不到的情况。具体操作应该是，<strong>点击九宫格（刚开始在左下角），然后选择“软件与更新”。进入后可以看到上面有很多栏，先看一进去的那一个界面，选择“下载自”（这个按钮后面有一串网址），然后选择“其他站点”，接着可能会提示输入密码（注意密码是盲输入，你是看不到你输入的密码的），接着点击按钮：自动选择最佳的服务器，最后等待测试完成然后选择，接着关闭，会提示重新载入。期间可能会有些卡顿，要等待。</strong>如果不是很喜欢更新的小伙伴可以不要关闭，打开更新这一栏，可以设置自动更新相关情况。</p>
@@ -258,7 +264,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">小白</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">小白理解</a>
         		</li>
       		
 		</ul>
@@ -477,15 +483,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">小白</a>
+                <a href="javascript:void(0)" class="js-tag color5">小白理解</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">狗头 新手理解</a>
+                <a href="javascript:void(0)" class="js-tag color5">闲着没事</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">芜湖！起飞</a>
+                <a href="javascript:void(0)" class="js-tag color4">题外话</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">开端</a>
               </li>
             
             <div class="clearfix"></div>
@@ -537,27 +547,27 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
         <ul class="search-ul">
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接1</a>
+              <a href="https://virtualtan.github.io/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>Virtualtan</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
+              <a href="/%E8%BF%98%E6%B2%A1%E6%9C%89" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接2</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
+              <a href="/%E8%BF%98%E6%B2%A1%E6%9C%89" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接3</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
+              <a href="/%E8%BF%98%E6%B2%A1%E6%9C%89" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接4</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
+              <a href="/%E8%BF%98%E6%B2%A1%E6%9C%89" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接5</a>
             </li>
           
             <li class="search-li">
-              <a href="http://localhost:4000/" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
+              <a href="/%E8%BF%98%E6%B2%A1%E6%9C%89" target="_blank" class="search-title"><i class="icon-quo-left icon"></i>友情链接6</a>
             </li>
           
         </ul>
@@ -568,7 +578,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
     
     	<section class="tools-section tools-section-me" q-show="aboutme">
   	  	
-  	  		<div class="aboutme-wrap" id="js-aboutme">很惭愧&lt;br&gt;&lt;br&gt;只做了一点微小的工作&lt;br&gt;谢谢大家</div>
+  	  		<div class="aboutme-wrap" id="js-aboutme">一个自己折腾的小小学习者。。</div>
   	  	
     	</section>
     
